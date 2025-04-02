@@ -2,7 +2,7 @@
 
 namespace Lab2._Synchronization
 {
-    internal class Program
+    internal class Lab2
     {
         static void Main(string[] args)
         {

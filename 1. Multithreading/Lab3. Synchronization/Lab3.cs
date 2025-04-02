@@ -1,6 +1,6 @@
 ﻿namespace Lab3._Synchronization
 {
-    internal class Program
+    internal class Lab3
     {
         private static double value = 0.5;
         private static Mutex mutex = new();

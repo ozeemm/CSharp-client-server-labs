@@ -12,7 +12,7 @@
         }
     }
 
-    internal class Program
+    internal class Lab1
     {
         static void Main(string[] args)
         {
