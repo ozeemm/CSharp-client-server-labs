@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1. SimpleApp", "Lab1. SimpleApp\Lab1. SimpleApp.csproj", "{5DE08A02-4BF6-4823-9C30-CCC110F565FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2. Relations", "Lab2. Relations\Lab2. Relations.csproj", "{469A8341-D7BC-4F9B-9099-30DE3C8573CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5DE08A02-4BF6-4823-9C30-CCC110F565FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DE08A02-4BF6-4823-9C30-CCC110F565FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DE08A02-4BF6-4823-9C30-CCC110F565FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469A8341-D7BC-4F9B-9099-30DE3C8573CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469A8341-D7BC-4F9B-9099-30DE3C8573CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469A8341-D7BC-4F9B-9099-30DE3C8573CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469A8341-D7BC-4F9B-9099-30DE3C8573CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
