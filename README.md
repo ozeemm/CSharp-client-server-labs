@@ -5,7 +5,7 @@
 - [x] Lab 2. Synchronization.
 - [x] Lab 3. Synchronization.
 - [ ] Lab 4. SocketServer.
-- [ ] Lab 5. ParallelStudents.
+- [x] Lab 5. ParallelStudents.
 
 ## 2. Entity Framework Core
 - [x] Lab1. SimpleApp.
