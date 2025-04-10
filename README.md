@@ -17,4 +17,4 @@
 - [ ] Lab3. gRPC.
 
 ## 4. Reflection
-- [ ] Lab1. ClassAnalyzer.
+- [x] Lab1. ClassAnalyzer.
