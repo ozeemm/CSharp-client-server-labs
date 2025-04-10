@@ -4,7 +4,7 @@
 - [x] Lab 1. AsyncThreads.
 - [x] Lab 2. Synchronization.
 - [x] Lab 3. Synchronization.
-- [ ] Lab 4. SocketServer.
+- [x] Lab 4. SocketServer.
 - [x] Lab 5. ParallelStudents.
 
 ## 2. Entity Framework Core

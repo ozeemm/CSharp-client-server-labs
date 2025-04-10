@@ -16,6 +16,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5. ParallelStudents", "Lab5. ParallelStudents\Lab5. ParallelStudents.csproj", "{D6B58CAB-D0D3-4B98-BC40-881DB1D5BE08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4. SocketServer", "Lab4. SocketServer\Lab4. SocketServer.csproj", "{B2E33E8B-3824-4CB8-8ACD-A892CF1C51BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4. SocketClient", "Lab4. SocketClient\Lab4. SocketClient.csproj", "{51DDB6FE-425E-4406-9DA8-9F7351FEC14B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{D6B58CAB-D0D3-4B98-BC40-881DB1D5BE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6B58CAB-D0D3-4B98-BC40-881DB1D5BE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6B58CAB-D0D3-4B98-BC40-881DB1D5BE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E33E8B-3824-4CB8-8ACD-A892CF1C51BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E33E8B-3824-4CB8-8ACD-A892CF1C51BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E33E8B-3824-4CB8-8ACD-A892CF1C51BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E33E8B-3824-4CB8-8ACD-A892CF1C51BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51DDB6FE-425E-4406-9DA8-9F7351FEC14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DDB6FE-425E-4406-9DA8-9F7351FEC14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DDB6FE-425E-4406-9DA8-9F7351FEC14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DDB6FE-425E-4406-9DA8-9F7351FEC14B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
