@@ -21,6 +21,17 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(db.Students.ToList());
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetStudent(int id)
+        {
+            var student = await db.Students.FindAsync(id);
+
+            if (student == null)
+                return BadRequest();
+
+            return new JsonResult(student);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddStudent(Student student)
         {
@@ -30,11 +41,10 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(student);
         }
 
-        [HttpDelete]
-        [Route("{id:int}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
-            var student = db.Students.Where(s => s.Id == id).FirstOrDefault();
+            var student = await db.Students.FindAsync(id);
             if (student == null)
                 return BadRequest();
 
@@ -44,11 +54,10 @@ namespace Lab1._WebAPI.Controllers
             return Ok();
         }
 
-        [HttpPut]
-        [Route("{id:int}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudent(int id, Student newStudent)
         {
-            var student = db.Students.Where(s => s.Id == id).FirstOrDefault();
+            var student = await db.Students.FindAsync(id);
             if (student == null)
                 return BadRequest();
 

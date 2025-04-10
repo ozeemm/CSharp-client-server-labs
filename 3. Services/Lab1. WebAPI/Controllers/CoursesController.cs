@@ -20,6 +20,16 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(db.Courses.ToList());
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCourse(int id)
+        {
+            var course = await db.Courses.FindAsync(id);
+            if (course == null)
+                return BadRequest();
+
+            return new JsonResult(course);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddCourse(Course course)
         {
@@ -29,11 +39,10 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(course);
         }
 
-        [HttpDelete]
-        [Route("{id:int}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
-            var course = db.Courses.Where(c => c.Id == id).FirstOrDefault();
+            var course = await db.Courses.FindAsync(id);
             if (course == null)
                 return BadRequest();
 
@@ -43,11 +52,10 @@ namespace Lab1._WebAPI.Controllers
             return Ok();
         }
 
-        [HttpPut]
-        [Route("{id:int}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCourse(int id, Course newCourse)
         {
-            var course = db.Courses.Where(c => c.Id == id).FirstOrDefault();
+            var course = await db.Courses.FindAsync(id);
             if (course == null)
                 return BadRequest();
 

@@ -8,8 +8,27 @@ namespace Lab1._WebAPI
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Grade> Grades { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Enrollment>()
+                .HasKey(e => new { e.StudentId, e.CourseId });
+
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Student)
+                .WithMany(s => s.Enrollments)
+                .HasForeignKey(e => e.StudentId);
+
+            modelBuilder.Entity<Enrollment>()
+                .HasOne(e => e.Course)
+                .WithMany(c => c.Enrollments)
+                .HasForeignKey(e => e.CourseId);
+        }
 
         public void SeedData()
         {
@@ -29,6 +48,10 @@ namespace Lab1._WebAPI
 
                 Courses.Add(course1);
                 Courses.Add(course2);
+                SaveChanges();
+
+                Enrollments.Add(new Enrollment { Student = student1, Course = course1 });
+                Enrollments.Add(new Enrollment { Student = student2, Course = course2 });
                 SaveChanges();
 
                 Grades.Add(new Grade { Student = student1, Course = course1, Score = 4 });

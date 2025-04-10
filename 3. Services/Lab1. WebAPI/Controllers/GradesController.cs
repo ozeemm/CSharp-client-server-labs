@@ -21,6 +21,17 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(db.Grades.ToList());
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetGrade(int id)
+        {
+            var grade = await db.Grades.FindAsync(id);
+
+            if (grade == null)
+                return BadRequest();
+
+            return new JsonResult(grade);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddGrade(Grade grade)
         {
@@ -30,8 +41,7 @@ namespace Lab1._WebAPI.Controllers
             return new JsonResult(grade);
         }
 
-        [HttpDelete]
-        [Route("{id:int}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGrade(int id)
         {
             var grade = db.Grades.Where(g => g.Id == id).FirstOrDefault();
@@ -44,8 +54,7 @@ namespace Lab1._WebAPI.Controllers
             return Ok();
         }
 
-        [HttpPut]
-        [Route("{id:int}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateGrade(int id, Grade newGrade)
         {
             var grade = db.Grades.Where(c => c.Id == id).FirstOrDefault();

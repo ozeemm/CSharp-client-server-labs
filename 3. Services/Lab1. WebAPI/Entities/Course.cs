@@ -10,7 +10,8 @@ namespace Lab1._WebAPI.Entities
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public List<Grade> Grades { get; set; } = new();
+        public ICollection<Grade>? Grades { get; set; } = new List<Grade>();
+        public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
 
         public void CopyFrom(Course course)
         {
