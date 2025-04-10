@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
 
 namespace Lab1._WebAPI
 {
@@ -37,6 +40,12 @@ namespace Lab1._WebAPI
             }
 
             app.MapControllers();
+
+            app.MapGet("/", () =>
+            {
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "index.html");
+                return Results.File(path, "text/html");
+            });
 
             app.Run();
         }
