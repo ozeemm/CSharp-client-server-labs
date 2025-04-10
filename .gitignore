@@ -482,3 +482,6 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+/3. Services/Lab1. WebAPI/app.db
+/3. Services/Lab1. WebAPI/app.db-shm
+/3. Services/Lab1. WebAPI/app.db-wal
