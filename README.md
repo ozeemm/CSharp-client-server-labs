@@ -14,7 +14,7 @@
 ## 3. Services
 - [x] Lab1. REST API.
 - [x] Lab2. JWT-Authorization.
-- [ ] Lab3. gRPC.
+- [x] Lab3. gRPC.
 
 ## 4. Reflection
 - [x] Lab1. ClassAnalyzer.
